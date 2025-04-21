@@ -22,6 +22,9 @@ public class UserServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//接收表單資料
+		//請求編碼
+		req.setCharacterEncoding("UTF-8");
 		
 	}
 	
