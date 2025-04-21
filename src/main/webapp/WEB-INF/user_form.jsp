@@ -11,7 +11,7 @@
 	<body style="padding: 20px">
 		<div>
 			<h2>使用者資料表單</h2>
-			<form class="pure-form" method="POST" action"/JavaWeb/user">
+			<form class="pure-form" method="POST" action="/JavaWeb/user">
 				<fieldset>
 					<legend>User Form</legend>
 					<label>姓名:</label>
@@ -30,7 +30,7 @@
 					<label>體重 (kg):</label>
 					<input name="weight" type="number" min="0.1" max="1000" step="0.1" required />
 					<p />
-					<button type="submit" class="pure-form pure-form-primary">送出</button>
+					<button type="submit" class="pure-button pure-button-primary">送出</button>
 					
 				</fieldset>
 			
