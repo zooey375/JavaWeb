@@ -13,8 +13,8 @@ public class User {
 		this.userName = username;
 		this.gender = gender;
 		this.age = Integer.parseInt(age);
-		this.height = Double.parseDouble(height);
-		this.weight = Double.parseDouble(weight);
+		this.height = Double.parseDouble(height); //Double.parseDouble() 是一個把字串轉成小數數字的方法。
+		this.weight = Double.parseDouble(weight); //
 		// 計算 bmi 值
 		this.bmiValue = this.weight / Math.pow(this.height/100, 2);
 		// 診斷
