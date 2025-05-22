@@ -24,7 +24,7 @@ public class BMIServlet extends HttpServlet {
 		
 		// 3.驗證參數
 		if(!(Util.isDouble(height)&&(Util.isDouble(weight)))) {
-			System.out.println("身高體重輸入錯誤");
+			resp.getWriter().print("身高體重輸入錯誤");
 			return;
 		}
 		
@@ -35,8 +35,8 @@ public class BMIServlet extends HttpServlet {
 		String result = getBMIResult(bmiValue);
 		
 		// 5.印出資訊
-		resp.getWriter().print("BMI 值 = " + bmiValue + " (" + result + ")");
-		
+		//resp.getWriter().print("BMI 值 = " + bmiValue + " (" + result + ")");
+		resp.getWriter().print(String.format("BMI 值 = %.2f (%s)", bmiValue, result));
 	}
 	
 	// 計算 bmi 值
@@ -48,7 +48,6 @@ public class BMIServlet extends HttpServlet {
 	// bmi 判讀
 	private String getBMIResult(double bmiValue) {
 		return bmiValue <= 18 ? "過輕" : (bmiValue > 23) ? "過重" : "正常";
-		
 	}
 	
 	
